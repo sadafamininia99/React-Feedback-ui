@@ -2,7 +2,7 @@ import Header  from "./components/Header"
 function App(){
      return (
          <>
-         <Header text='sadaf' />
+         <Header />
          <div className="contsiner">
              <h1>
                  My app

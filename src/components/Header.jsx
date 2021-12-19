@@ -1,16 +1,21 @@
-import React from 'react'
 
-function Header({text}) {
+function Header({text}){
     return (
         <header>
             <div className="container">
-                <h2> {text} Feedback UI</h2>
+                <h2>{text}</h2>
             </div>
             
         </header>
     )
 }
-//default props
 
+Header.defultProps= {
+    text: 'Feedback ui',
+}
+
+// Header.PropTypes={
+//     text :PropTypes.string,
+// }
 
 export default Header
