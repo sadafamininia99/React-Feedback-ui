@@ -40,6 +40,10 @@ header {
   margin: 20px 0;
   position: relative;
 }
+.card.reverse{
+background-color: rgba(0,0,0,0.4);
+color: #fff;
+}
 
 .card.reverse {
   background-color: rgba(0, 0, 0, 0.4);
