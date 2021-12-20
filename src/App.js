@@ -7,6 +7,12 @@ import Card from "./components/shared/Card";
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
+    const deleteFeedback=(id) =>{
+      if(window.confirm('are you sure want to delete ?')){
+      
+      setFeedback(feedback.filter((item) =>item.id !==id ))
+    }
+  }
   return (
     <>
       <Header />
