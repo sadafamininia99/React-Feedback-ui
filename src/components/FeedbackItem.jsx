@@ -20,4 +20,4 @@ function FeedbackItem() {
   );
 }
 
-export default FeedbackItem;
+export default FeedbackItem;  
