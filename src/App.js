@@ -9,6 +9,11 @@ import Card from "./components/shared/Card";
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
+  const addFeedback =(newFeedback) =(newFeedback)=>{
+    console.log(newFeedback)
+  }
+
+
   const deleteFeedback = (id) => {
     if (window.confirm("are you sure want to delete ?")) {
       setFeedback(feedback.filter((item) => item.id !== id));
@@ -18,7 +23,7 @@ function App() {
     <>
       <Header />
       <div className="contsiner">
-        <FeedbackForm />
+        <FeedbackForm handleAdd={addFeedback }/>
         <FeedbackStats  feedback={feedback}/>
         <FeedbackList feedback={feedback} deleteFeedback={deleteFeedback} />
         <Card />
