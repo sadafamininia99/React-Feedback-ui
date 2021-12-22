@@ -166,6 +166,9 @@ input:focus {
 .btn-secondary {
   background: #ff6a95;
 }
+.btn-third {
+  background: #19bd99;
+}
 
 .btn:hover {
   transform: scale(0.98);
@@ -184,9 +187,10 @@ input:focus {
 }
 
 .message {
-  padding-top: 10px;
+  padding-top: 15px;
   text-align: center;
   color: rebeccapurple;
+  font-size: 19px;
 }
 
 .about-link {
