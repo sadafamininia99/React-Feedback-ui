@@ -27,19 +27,20 @@ function FeedbackForm({handleAdd}) {
 
 
 //fun
-  const handleSubmit =(e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
-  if (text.trim().length  > 10 ){
-    const newFeedback ={
+  if (text.trim().length  > 10 ) {
+    const newFeedback = {
       text ,
-      rating
+      rating,
 
     }
 
  
-    handleAdd(newFeedback);
-    setText('')
+ handleAdd(newFeedback)
+    // handleAdd(newFeedback);
+    // setText('')
 
     }
   }

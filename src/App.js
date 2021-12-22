@@ -1,3 +1,4 @@
+import {v4 as uuidv4} from 'uuid'
 import { useState } from "react";
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
@@ -9,8 +10,11 @@ import Card from "./components/shared/Card";
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
-  const addFeedback =(newFeedback) =(newFeedback)=>{
-    console.log(newFeedback)
+  const addFeedback =(newFeedback) =(newFeedback) =>{
+    newFeedback.id =uuidv4()
+
+    // console.log(newFeedback)
+    setFeedback([newFeedback,...feedback])
   }
 
 
