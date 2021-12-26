@@ -11,31 +11,30 @@ function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
   const addFeedback = (newFeedback) => {
-    newFeedback.id =uuidv4()
-    setFeedback([newFeedback,...feedback])
+    newFeedback.id = uuidv4();
+    setFeedback([newFeedback, ...feedback]);
   };
 
   // console.log(newFeedback)
   // setFeedback([newFeedback, ...feedback]);
-// }
+  // }
 
-const deleteFeedback = (id) => {
-  if (window.confirm("are you sure want to delete ?")) {
-    setFeedback(feedback.filter((item) => item.id !== id));
-  }
-};
+  const deleteFeedback = (id) => {
+    if (window.confirm("are you sure want to delete ?")) {
+      setFeedback(feedback.filter((item) => item.id !== id));
+    }
+  };
 
-return (
-  <>
-    <Header />
-    <div className="contsiner">
-      <FeedbackForm handleAdd={addFeedback} />
-      <FeedbackStats feedback={feedback} />
-      <FeedbackList feedback={feedback} deleteFeedback={deleteFeedback} />
-      <Card />
-    </div>
-  </>
-
-);
+  return (
+    <>
+      <Header />
+      <div className="contsiner">
+        <FeedbackForm handleAdd={addFeedback} />
+        <FeedbackStats feedback={feedback} />
+        <FeedbackList feedback={feedback} deleteFeedback={deleteFeedback} />
+        <Card />
+      </div>
+    </>
+  );
 }
 export default App;
