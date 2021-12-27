@@ -9,3 +9,4 @@ state in react are immutable<br>
 we can not change state directly<br>
 (set)<br>
 we had to reset <br>
+React router version 6
