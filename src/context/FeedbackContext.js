@@ -1,11 +1,19 @@
-import {creatContext ,useState} from 'react'
+import { createContext, useState } from "react";
+const FeedbackContext = createContext();
 
-const FeedbackContext =creatContext()
-export const FeedbackProvider =({children}) => {
+export const FeedbackProvider = ({ children }) => {
+  const [feedback, setFeedback] = useState([
+    {
+      id: 1,
+      text: "this is from context ",
+      rating: 10,
+    }
+  ])
+  return <FeedbackContext.Provider value ={{
+    feedback ,
+  }}>
 
-    return <FeedbackContext.provider value={{
-        const [feedback,setFeedback ] =const [state, setstate] = useState(initialState)
-    }}>
-        {children}
-    </FeedbackContext.provider>
+      {children}
+      </FeedbackContext.Provider>
 }
+export default FeedbackContext
